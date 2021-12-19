@@ -1,0 +1,5 @@
+name: "action-run-euscan"
+description: "Executes euscan for all ebuilds of a repository"
+runs:
+  using: "docker"
+  image: "Dockerfile"
