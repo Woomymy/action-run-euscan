@@ -33,10 +33,8 @@ echo "Setting up repos"
 
 REPO=$(cat profiles/repo_name)
 cat >> "/etc/portage/repos.conf/${REPO}" << EOF
-${REPO}
+[${REPO}]
 location = /var/db/repos/${REPO}
-sync-type = git
-sync-uri = https://github.com/Woomymy/woomy-overlay.git
 EOF
 
 cp -r "${PWD}" "/var/db/repos/${REPO}"
